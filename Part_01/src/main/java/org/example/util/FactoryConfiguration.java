@@ -9,7 +9,10 @@ public class FactoryConfiguration {
     private static FactoryConfiguration factoryConfiguration;
     private SessionFactory sessionFactory;
     private FactoryConfiguration(){
+        // Factory Configuration
         Configuration configuration = new Configuration().configure().addAnnotatedClass(Book.class);
+
+        //Create session
         sessionFactory = configuration.buildSessionFactory();
     }
 
